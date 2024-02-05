@@ -1,0 +1,54 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'events';
+
+
+  count:number=0;
+
+  clickMethod(){
+    this.count++;
+
+  }
+
+  value:any="Suraj";
+  changeValue(val:any){
+    this.value = val;
+  }
+
+
+  // impChange($event:any){
+  //   console.log(event)
+  // }
+
+  // impChange(event:any){
+  //   console.log(event.target.value)
+  // }
+
+  value2:any="";
+  impChange(event:any){
+    console.log(event.target.value);
+    this.value2 = event.target.value;
+  }
+
+  value3:any="";
+  onSelectChange(event:any){
+    this.value3 = event.target.value;
+  }
+
+
+  onScroll(event:any){
+    console.log(event);
+  }
+
+  getData(val:string){
+  console.warn(val);
+  }
+
+
+}
