@@ -1,0 +1,60 @@
+1. Click
+<br>
+<button (click)="clickMethod()">+ Count</button>
+
+count: {{count}}
+
+
+<br><br><br>
+
+2. Pass data to events
+<br>
+<button (click)="changeValue('Vivek')">Change Value</button>
+<br>
+value: {{value}}
+<br><br>
+
+
+3. Change $events
+<br><br>
+<input type="text" (input)="impChange($event)" placeholder="Enter Name">
+<br>
+value: {{value2}}
+
+4. Select DropDown
+<br><br>
+<select (change)="onSelectChange($event)">
+  <option value="Angular">Angular</option>
+  <option value="React">React</option>
+  <option value="Redx">Redx</option>
+  <option value="React Native">React Native</option>
+</select>
+<br>
+value: {{ value3 }}
+<br><br>
+
+5. Click event
+<br>
+<button (click)="getData('Hello Friends')">Click Me</button>
+<br>
+<br>
+
+6. Keyup event
+<br>
+<input type="text" placeholder="keyup box" (keyup)="getData('-1500')">
+<br>
+<input type="text" #box1 placeholder="keyup box" (keyup)="getData(box1.value)"> 
+<br>
+<input type="text" #box2 placeholder="keydown box" (keydown)="getData(box2.value)">
+<br>
+<input type="text" #box3 placeholder="blur" (blur)="getData(box3.value)">
+<br>
+<input type="text" #box4 placeholder="input" (input)="getData(box4.value)">
+
+<h3 (mouseover)="getData('mouse over')">Mouse Events</h3>
+<h3 ((mouseleave))="getData('mouse leave')">Mouse Leave</h3>
+
+
+
+
+
